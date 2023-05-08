@@ -68,6 +68,11 @@ module.exports = (options) => {
       middlewares.checkEntityExists(Restaurant, 'restaurantId'),
       ProductController.indexRestaurant)
 
+  /* app.route('/restaurants/:restaurantId/promote')
+  .get(
+    middlewares.checkEntityExists(Restaurant, 'restaurantId'),
+    ProductController.indexRestaurant) */
+
   app.route('/restaurants/:restaurantId/analytics')
     .get(
       middlewares.isLoggedIn,
